@@ -60,18 +60,17 @@ class App(object):
         if len(dest_file_path) == 0:
             return
 
-        if os.path.exists(dest_file_path) == False:
+        if not os.path.exists(dest_file_path):
             self.warning_box("目录不存在")
             return
 
         self.startfile(dest_file_path)
 
-
     def btn_src_file_clicked(self):
         src_file_path = self.form.edit_line_src_file.text()
 
         src_dirname = ntpath.dirname(src_file_path)
-        if len(src_dirname) == 0 or os.path.exists(src_dirname) == False:
+        if len(src_dirname) == 0 or not os.path.exists(src_dirname):
             src_dirname = "./"
 
         file_name, _ = QFileDialog.getOpenFileName(self.window,
