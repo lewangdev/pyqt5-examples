@@ -1,5 +1,5 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtCore import Qt
+from PyQt5.QtCore import QEvent, Qt
 from PyQt5.QtGui import QCursor
 import qtawesome
 import sys
@@ -332,6 +332,12 @@ class MainUi(QtWidgets.QMainWindow):
     def mouseReleaseEvent(self, event):
         self.left_button_pressed = False
         self.setCursor(QCursor(Qt.ArrowCursor))
+
+    def event(self, ev):
+        """Catch system events."""
+        if ev.type() == QEvent.PaletteChange:  # detect theme switches
+            print("theme changed")
+        return super().event(ev)
 
 
 def main():
