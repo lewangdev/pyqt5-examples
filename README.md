@@ -6,7 +6,7 @@ PyQt5 示例
 
 ## 1. 布局器的使用和 UI 美化
 
-![预览图](gridlayout/preview.png)
+![预览图](grid-layout/preview.png)
 
 主要逻辑[参考](https://zmister.com/archives/477.html)
 
