@@ -1,8 +1,8 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
-import sys
-import qtawesome
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QCursor
+import qtawesome
+import sys
 
 
 class MainUi(QtWidgets.QMainWindow):
@@ -30,7 +30,6 @@ class MainUi(QtWidgets.QMainWindow):
         self.main_layout.addWidget(self.right_widget, 0, 2, 12, 10)  # 右侧部件在第0行第3列，占8行9列
         self.setCentralWidget(self.main_widget)                      # 设置窗口主部件
 
-        
         self.left_close = QtWidgets.QPushButton("")  # 关闭按钮
         self.left_visit = QtWidgets.QPushButton("")  # 空白按钮
         self.left_mini = QtWidgets.QPushButton("")   # 最小化按钮
